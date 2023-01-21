@@ -1,4 +1,5 @@
-import { ProductType, useShop } from "../context/ShopContext";
+import { useShop } from "../context/ShopContext";
+import { ProductType } from "../types/types";
 
 export default function Product({ product }: { product: ProductType }) {
     const { state: { cart }, dispatch } = useShop();
