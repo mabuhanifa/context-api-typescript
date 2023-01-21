@@ -62,6 +62,7 @@ const reducer = (state: StateType, action: Action) => {
         case "CHANGE_CART_QTY":
             return {
                 ...state,
+                // eslint-disable-next-line eqeqeq
                 cart: state.cart.filter((c) => c.id == action.payload.id ? (c.quantity = action.payload.quantity) : c.quantity)
             };
         default:

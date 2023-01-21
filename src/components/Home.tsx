@@ -3,7 +3,7 @@ import { useShop } from "../context/ShopContext";
 import Product from "./Product";
 
 export default function Home() {
-    const { state: { cart, products }, dispatch } = useShop();
+    const { state: { products }, dispatch } = useShop();
     useEffect(() => {
         const fetchProducts = async () => {
             const response = await fetch(`https://dummyjson.com/products`);

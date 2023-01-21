@@ -2,6 +2,10 @@ import { ProductType, useShop } from "../context/ShopContext";
 
 export default function Product({ product }: { product: ProductType }) {
     const { state: { cart }, dispatch } = useShop();
+    const newProduct = {
+        ...product,
+        quantity: 1
+    }
     return (
         <div key={product.id} className="border border-gray-300 p-3 rounded shadow-lg  relative h-[360px]">
 
@@ -29,7 +33,7 @@ export default function Product({ product }: { product: ProductType }) {
                         <button className='w-full py-2 bg-indigo-700 text-white rounded'
                             onClick={() => dispatch({
                                 type: "ADD_TO_CART",
-                                payload: product
+                                payload: newProduct
                             })}
                         >Add to Cart</button>
 
