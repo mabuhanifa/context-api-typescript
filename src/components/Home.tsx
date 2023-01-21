@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useShop } from "../context/ShopContext";
+import Cart from "./Cart";
 import Product from "./Product";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
     return (
         <div>
             <>
-                <h1 className='text-center text-2xl font-bold mt-5 text-indigo-700'>Redux-Typescript</h1>
+                <h1 className='text-center text-2xl font-bold mt-5 text-indigo-700'>Context-API-Typescript</h1>
                 <div className='p-5 grid grid-cols-2 md:grid-cols-3'>
                     <div className='col-span-1 md:col-span-2 grid md:grid-cols-3 gap-3 p-2'>
 
@@ -29,6 +30,7 @@ export default function Home() {
                         }
                     </div>
                     <div className='p-2 col-span-1 '>
+                        <Cart />
                     </div>
                 </div>
             </>
